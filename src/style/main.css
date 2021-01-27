@@ -1,0 +1,11 @@
+.icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 19px;
+  height: 25px;
+  background: url(../../img/icon/Vector.png) no-repeat center/cover;
+  -webkit-filter: invert(51%) sepia(76%) saturate(330%) hue-rotate(201deg) brightness(89%) contrast(89%);
+          filter: invert(51%) sepia(76%) saturate(330%) hue-rotate(201deg) brightness(89%) contrast(89%);
+}
+/*# sourceMappingURL=main.css.map */
