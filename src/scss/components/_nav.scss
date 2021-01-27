@@ -1,72 +1,170 @@
-
-// body {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     min-height: 100vh;
-//     margin: 0;
-// }
-
-// input[type='checkbox']{
-//     visibility: hidden;
-//     display: none;
-// }
-
-// .check {
-//     display: block;
-//     position: relative;
-//     width: 120px;
-//     height: 60px;
-//     background: #092c3e;
-//     cursor: pointer;
-//     border-radius: 50px;
-//     overflow: hidden;
-//     transition: ease-in .6s;
-// }
-
-// input[type='checkbox']:checked ~ .check {
-//     background-color: #fff;
-//     box-shadow: 0 0 0 1200px #092c3e;
-// }
-
-// .check:before {
-//     content: '';
-//     position: absolute;
-//     top: 5px;
-//     left: 5px;
-//     background-color: #fff;
-//     width: 50px;
-//     height: 50px;
-//     border-radius: 50%;
-//     transition: .6s;
-// }
-
-// input[type='checkbox']:checked ~ .check:before {
-//     transform: translateX(-50px);
-// }
-
-// .check:after {
-//     content: '';
-//     position: absolute;
-//     top: 5px;
-//     right: 5px;
-//     background-color: #092c3e;
-//     width: 50px;
-//     height: 50px;
-//     border-radius: 50%;
-//     transition: .6s;
-//     transform: translateX(50px);
-
-// }
-
-// input[type='checkbox']:checked ~ .check:after {
-//     transform: translateX(0px);
-// }
-
-.icon {
+.nav {
     display: flex;
-    width: 19px;
-    height: 25px;
-    background: url(../../img/icon/Vector.png) no-repeat center/cover;
-    filter: invert(51%) sepia(76%) saturate(330%) hue-rotate(201deg) brightness(89%) contrast(89%);
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 880px;
+    width: 98px;
+    background-color: white;
+    padding: 46px 24px;
+
+        &__logo {
+            width: 42px;
+            height: 44px;
+            background: url(../../../img/icon/VK.png) no-repeat center/contain;
+
+            @include mobile {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        &__wrap {
+            height: 430px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+
+            @include tablet {
+                height: 50px;
+                width: 60vw;
+                justify-content: space-between;
+                flex-direction: row;
+            }
+
+            .home {
+                background: url(../../../img/icon/Home.png);            
+            }
+    
+            .news {
+                background: url(../../../img/icon/News.png);              
+            }
+    
+            .friends {
+                background: url(../../../img/icon/Friends.png);          
+            }
+    
+            .messages {
+                background: url(../../../img/icon/messages.png);  
+            }
+    
+            .media {
+                background: url(../../../img/icon/Media.png);
+            }
+    
+            .statistics {
+                background: url(../../../img/icon/Statistics.png); 
+            }
+    
+            .settings {
+                background: url(../../../img/icon/Settings.png);
+            }
+
+            .nav__item {
+                width: 98px;
+                height: 50px;
+                // background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+
+                
+                
+                @include mobile {
+                    background-size: contain;
+                    width: 15px;
+                    height: 50px;
+                }
+            }
+
+            .nav__item:hover {
+                cursor: pointer;
+                filter: invert(51%) sepia(76%) saturate(330%) hue-rotate(201deg) brightness(89%) contrast(89%);
+                border-left: 4px solid #7F7FD5;
+                @include tablet {
+                    border-left: none;
+                    border-bottom: 2px solid #7F7FD5;
+                }
+            }
+
+            
+        }
+
+        .nav__theme {
+            input[type='checkbox']{
+                visibility: hidden;
+                display: none;
+            }
+
+            .nav__check {
+                display: block;
+                position: relative;
+                width: 60px;
+                height: 30px;
+                background: #ffffff;
+                border: 1px solid $primary-color;
+                cursor: pointer;
+                border-radius: 50px;
+                overflow: hidden;
+                transition: ease-in .6s;
+
+                @include mobile {
+                    width: 20px;
+                    height: 20px;
+                    border: none;
+                    border-radius: 50%;
+                    background: #7F7FD5;
+                }
+
+            }
+
+            input[type='checkbox']:checked ~ .nav__check {
+                background-color: #7F7FD5;
+
+                @include mobile {
+                    background-color: rgb(212, 212, 77);
+                }
+            }
+
+            .nav__check:before {
+                content: '';
+                position: absolute;
+                top: 4px;
+                left: 5px;
+                background-color: #7F7FD5;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                transition: .6s;
+
+                @include mobile {
+                    display: none;
+                }
+            }
+
+            input[type='checkbox']:checked ~ .nav__check:before {
+                transform: translateX(30px);
+                background-color: #ffffff;
+
+                @include mobile {
+                    transform: none;
+                }
+            }
+            
+            
+        }
+           
+        
+
+    @include tablet {
+        flex-direction: row;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        height: 50px;
+        width: 100%;
+        z-index: 10;
+        padding: 0 25px 0 25px;
+    }
 }
+
