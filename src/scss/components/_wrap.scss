@@ -1,4 +1,5 @@
 .wrap {
+    display: flex;
     position: relative;
     max-width: 1280px;
     min-height: 880px;
@@ -7,7 +8,11 @@
     margin-bottom: 20px;
     background-color: $secondary-background-color;
     border-radius: 14px;
-    padding: 46px;
+    @include tablet {
+        flex-direction: column;
+        margin-top: 0;
+    }
+    // padding: 46px;
 }
 
 .wrap::before {
@@ -19,6 +24,9 @@
     left: calc(50% - 810px);
     background: url(../../../img/background/shape.png) no-repeat center/cover;
     z-index: -1;
+    @include tablet {
+        display: none;
+    }
 
 }
 
@@ -32,6 +40,9 @@
     background: linear-gradient(#7F7FD5, #E786D7);
     border-radius: 50%;
     z-index: 5;
+    @include mobile {
+        display: none;
+    }
 
 }
 
