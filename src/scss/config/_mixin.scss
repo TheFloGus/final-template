@@ -5,3 +5,15 @@
 @mixin titles {
     font-family: Gilroy;
 }
+
+@mixin mobile {
+    @media (max-width: 500px) {
+        @content;
+    } 
+}
+
+@mixin tablet {
+    @media (max-width: 900px) {
+        @content;
+    } 
+}
