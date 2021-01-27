@@ -1,2 +1,14 @@
-@import 'components/audience', 'components/header', 'components/nav', 'components/visitors';
-@import 'config/reset'
+@import 'config/reset', 'config/mixin', 'config/variables';
+@import 'components/audience', 'components/header', 'components/nav', 'components/visitors', 'components/device', 'components/gender-age', 'components/geo', 'components/wrap';
+
+
+
+@font-face {
+    font-family: Gilroy;
+    src: url(../../fonts/Gilroy-Light.otf);
+}
+
+*{
+    box-sizing: border-box;
+}
+
