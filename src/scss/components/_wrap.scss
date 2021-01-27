@@ -1,0 +1,37 @@
+.wrap {
+    position: relative;
+    max-width: 1280px;
+    min-height: 880px;
+    margin: 0 auto;
+    margin-top: calc(10vh - 25px);
+    margin-bottom: 20px;
+    background-color: $secondary-background-color;
+    border-radius: 14px;
+    padding: 46px;
+}
+
+.wrap::before {
+    content: '';
+    position: fixed;
+    width: 1500px;
+    height: 806px;
+    top: 0;
+    left: calc(50% - 810px);
+    background: url(../../../img/background/shape.png) no-repeat center/cover;
+    z-index: -1;
+
+}
+
+.wrap::after {
+    content: '';
+    position: fixed;
+    width: 413px;
+    height: 413px;
+    top: 880px;
+    right: calc(50% - 873px);
+    background: linear-gradient(#7F7FD5, #E786D7);
+    border-radius: 50%;
+    z-index: 5;
+
+}
+
