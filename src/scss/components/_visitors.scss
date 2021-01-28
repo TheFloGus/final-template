@@ -1,0 +1,18 @@
+.visitors {
+    @include grid-area(visitors);
+    @include card-container(341px);
+
+    @include titles
+}
+
+.friends {
+    @include grid-area(friends);
+    @include card-container(341px);
+  
+}
+
+.followers {
+    @include grid-area(followers);
+    @include card-container(341px);
+    
+}

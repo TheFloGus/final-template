@@ -1,0 +1,4 @@
+.gender-age {
+    @include grid-area(gender-age);
+    @include card-container(675px)
+}

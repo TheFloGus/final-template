@@ -1,0 +1,4 @@
+.audience {
+    @include grid-area(audience);
+    @include card-container(768px)
+}

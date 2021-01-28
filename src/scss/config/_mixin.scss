@@ -3,8 +3,13 @@
 }
 
 @mixin titles {
-    font-family: Gilroy;
-}
+    font-family: 'Gilroy Bold';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    color: $primary-color;
+    }
 
 @mixin mobile {
     @media (max-width: 500px) {
@@ -13,7 +18,23 @@
 }
 
 @mixin tablet {
-    @media (max-width: 900px) {
+    @media (max-width: 1025px) {
         @content;
     } 
+}
+
+@mixin grid-area ($name) {
+    grid-area: $name;
+    background-color: white;
+    border: 1px solid #EBEBEB;
+    border-radius: 13px;
+    
+}
+
+@mixin card-container ($width) {
+    width: $width;
+    padding: 24px;
+    @include tablet {
+        width: 100%;
+    }
 }
