@@ -5,7 +5,7 @@
     min-height: 880px;
     height: 100%;
     margin: 0 auto;
-    margin-top: calc(10vh - 25px);
+    margin-top: calc(5vh - 25px);
     margin-bottom: 20px;
     background-color: $secondary-background-color;
     border: 1px solid #EFF3F9;
@@ -38,7 +38,7 @@
     position: fixed;
     width: 413px;
     height: 413px;
-    top: 880px;
+    top: 800px;
     right: calc(50% - 873px);
     background: linear-gradient(#7F7FD5, #E786D7);
     border-radius: 50%;

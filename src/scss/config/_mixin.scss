@@ -4,12 +4,17 @@
 
 @mixin titles {
     font-family: 'Gilroy Bold';
-    font-style: normal;
-    font-weight: bold;
     font-size: 20px;
     line-height: 24px;
     color: $primary-color;
     }
+
+@mixin text ($size, $color) {
+    font-family: 'Gilroy';
+    font-size: $size;
+    line-height: 24px;
+    color: $color;
+}
 
 @mixin mobile {
     @media (max-width: 500px) {
@@ -19,6 +24,12 @@
 
 @mixin tablet {
     @media (max-width: 1025px) {
+        @content;
+    } 
+}
+
+@mixin mobile-small {
+    @media (max-width: 360px) {
         @content;
     } 
 }

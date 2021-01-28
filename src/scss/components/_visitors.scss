@@ -1,18 +1,135 @@
+.friends {
+    position: relative;
+    @include grid-area(friends);
+    @include card-container(341px);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50% 
+    
+}
+
 .visitors {
+    position: relative;
     @include grid-area(visitors);
     @include card-container(341px);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50% 
+    
+}
 
+
+.followers {
+    position: relative;
+    @include grid-area(followers);
+    @include card-container(341px);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50% 50% 
+    
+}
+
+.card__title{
     @include titles
 }
 
-.friends {
-    @include grid-area(friends);
-    @include card-container(341px);
-  
+.card__dots {
+    justify-self: end;
+    width: 5px;
+    height: 5px;
+    background-color: $secondary-color;
+    border-radius: 50%;
+    margin-top: 10px;
 }
 
-.followers {
-    @include grid-area(followers);
-    @include card-container(341px);
-    
+.card__dots::before {
+    content: '';
+    position: absolute;
+    top: 24px;
+    right: 35px;
+    width: 5px;
+    height: 5px;
+    background-color: $secondary-color;
+    border-radius: 50%;
+    margin-top: 10px;
+
+}
+
+.card__dots::after {
+    content: '';
+    position: absolute;
+    top: 24px;
+    right: 46px;
+    width: 5px;
+    height: 5px;
+    background-color: $secondary-color;
+    border-radius: 50%;
+    margin-top: 10px;
+
+}
+
+.card__text {
+    @include text(20px, $primary-color);
+    align-self: end;
+}
+
+.card__numbers {
+    @include text(20px, $secondary-color);
+    margin-right: 20px;
+    align-self: end;
+    justify-self: end;
+}
+
+.card__numbers--middle{
+    @include text(20px, $secondary-color);
+    margin-right: 20px;
+    align-self: end;
+    justify-self: end;
+}
+
+.card__numbers::before {
+    content: '';
+    position: absolute;
+    bottom: 32px;
+    right: 18px;
+    width: 8px;
+    height: 8px;
+    border-left: 2px solid #7F7FD5;
+    border-bottom: 2px solid #7F7FD5;
+    transform: rotate(135deg);
+}
+
+.card__numbers::after {
+    content: '';
+    position: absolute;
+    bottom: 30px;
+    right: 22px;
+    width: 2px;
+    height: 12px;
+    background-color: #7F7FD5;
+    border-radius: 1px;
+}
+
+
+.card__numbers--middle::before {
+    content: '';
+    position: absolute;
+    bottom: 30px;
+    right: 18px;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #E786D7;
+    border-top: 2px solid #E786D7;
+    transform: rotate(135deg);
+}
+
+.card__numbers--middle::after {
+    content: '';
+    position: absolute;
+    bottom: 30px;
+    right: 22px;
+    width: 2px;
+    height: 12px;
+    background-color: #E786D7;
+    border-radius: 1px;
 }
