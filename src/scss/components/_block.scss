@@ -27,7 +27,7 @@
     }
 
     @include mobile {
-        grid-template-rows: repeat(3, 148px) repeat(4, 242px);
+        grid-template-rows: repeat(3, 148px) repeat(2, 300px) 242px minmax(242px, 1fr);
         grid-template-columns: 100%;
         grid-template-areas: 
         " friends" "visitors"
@@ -40,6 +40,10 @@
         padding: 20px 15px 30px 15px;
 
     }
+}
+
+.card__title{
+    @include titles
 }
 
 
