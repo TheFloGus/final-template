@@ -153,21 +153,5 @@
             }
         }
     }
-    .russia {
-        display: inline;
-
-        &:after {
-            content: '94%';
-            position: absolute;
-            left: 28%;
-            color: $secondary-color;
-            @include mobile-small{
-                left: 90%
-            }
-        }
-    }
-    
-
-
 }
 
