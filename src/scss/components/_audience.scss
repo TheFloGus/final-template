@@ -1,4 +1,165 @@
 .audience {
     @include grid-area(audience);
-    @include card-container(768px)
+    @include card-container(768px);
+
+
+    
+
+    &__container {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 29px;
+
+        @include mobile {
+            order: 1;
+            justify-content: space-between;
+            margin-bottom: 50px;
+        }
+
+        @include mobile-small {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px
+        }
+
+    }
+
+    &__date {
+        @include text(12px, $primary-color);
+        margin-left: 138px;
+
+        @include tablet {
+            margin-left: 0;
+        }
+
+        @include mobile {
+            margin-left: 0;
+            order: 3;
+        }
+
+    }
+
+    &__date::before {
+        content: '';
+        position: absolute;
+        top: 7px;
+        left: 505px;
+        width: 5px;
+        height: 5px;
+        transform: rotate(45deg);
+        border-right: 1px solid $primary-color;
+        border-bottom: 1px solid $primary-color;
+
+        @include tablet {
+            left: 36%;
+        }
+        
+        @include mobile {
+            left: 40vw;
+            top: 31px;
+        }
+
+        @include mobile-small{
+            left: 62vw;
+            top: 54px;
+        }
+    }  
+    
+    &__input {
+        display: flex;
+        justify-content: space-between;
+        width: 104px;
+        margin-right: 50px;
+
+        @include mobile {
+            width: auto;
+            margin-right: 0;
+        }
+
+        @include mobile-small {
+            width: auto;
+        }  
+
+    }
+
+    .box__container {
+        position: relative;
+        @include text (12px, $primary-color);
+        font-family: 'Gilroy SemiBold';
+        cursor: pointer;
+
+        @include mobile {
+            margin-left: 35px;
+            order: 2;
+        }
+
+        @include mobile-small{
+            margin-right: 25px;
+            margin-left: 50px;
+        }
+    }
+
+    .box__container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+
+      &__checkmark {
+        position: absolute;
+        top: 3px;
+        left: -21px;
+        height: 16px;
+        width: 16px;
+        // background-color: rgb(12, 12, 12);
+        border-radius: 5px;
+        border: 1.5px solid #7F7FD5;
+      }
+
+      .box--red {
+        border: 1.5px solid #E786D7;
+      }
+
+      &__checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+
+      .box__container input:checked ~ &__checkmark:after {
+        display: block;
+      }
+
+      &__checkmark:after {
+        left: 4px;
+        top: 2px;
+        width: 3px;
+        height: 5px;
+        border: solid #7F7FD5;
+        border-width: 0 1px 1px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+
+
+    
+
+    .graph__container {
+        overflow-x: auto;
+    }
+
+    &__graph {
+        width: 716px;
+        height: 141px;
+        background: url(../img/Graphs-and-charts/Audience.png) no-repeat center/contain;
+    }
+    
 }
+
