@@ -27,10 +27,10 @@
     left: calc(50% - 810px);
     background: url(../img/background/shape.png) no-repeat center/cover;
     z-index: -1;
+
     @include tablet {
         display: none;
     }
-
 }
 
 .wrap::after {
@@ -46,6 +46,5 @@
     @include tablet {
         display: none;
     }
-
 }
 

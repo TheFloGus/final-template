@@ -38,8 +38,7 @@
     grid-area: $name;
     background-color: white;
     border: 1px solid #EBEBEB;
-    border-radius: 13px;
-    
+    border-radius: 13px; 
 }
 
 @mixin card-container ($width) {
