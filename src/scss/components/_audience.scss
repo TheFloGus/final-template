@@ -2,9 +2,6 @@
     @include grid-area(audience);
     @include card-container(768px);
 
-
-    
-
     &__container {
         position: relative;
         display: flex;
@@ -83,7 +80,6 @@
         @include mobile-small {
             width: auto;
         }  
-
     }
 
     .box__container {
@@ -147,13 +143,6 @@
         -ms-transform: rotate(45deg);
         transform: rotate(45deg);
       }
-
-
-    
-
-    .graph__container {
-        overflow-x: auto;
-    }
 
     &__graph {
         width: 716px;
