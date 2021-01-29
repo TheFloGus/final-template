@@ -21,14 +21,10 @@
             </div>
             <label class="nav__theme">
                 <input type="checkbox" class="nav__checkbox">
-                <div class="nav__check"></div>
+                <span class="nav__check"></span>
             </label>
-
             <a href="#" class="nav__hamburger"></a>
-
         </nav>
-        
-
         <main class="main">
             <header class="header">
                 <div class="header__container">
@@ -41,8 +37,6 @@
                     <a href="#" class="header__avatar"></a>
                 </div>
             </header>
-
-
             <div class="cards">
                 <div class="friends">
                     <h2 class="card__title">Friends</h2>
@@ -78,7 +72,6 @@
                             </label>
                         </div>
                     </div>
-
                     <div class="graph__container">
                         <div class="audience__graph"></div>
                     </div>
@@ -92,10 +85,18 @@
                             <p class="device__name">Mobile views</p>
                         </div>
                     </div>
-
                 </div>
-                <div class="gender-age">
-                    <h2 class="card__title">Gender / Age</h2>
+                <div class="gender">
+                    <div class="gender__header">
+                        <h2 class="card__title">Gender / Age</h2>
+                        <div class="gender__names">
+                            <p class="gender__name">women</p>
+                            <p class="gender__name">men</p>
+                        </div>
+                    </div>
+                        <div class="graph__container">
+                            <div class="gender__graph"></div>
+                        </div>
                 </div>
                 <div class="geo">
                     <h2 class="card__title geo__title" > Geo</h2>
@@ -103,27 +104,23 @@
                         <a href="#" class="geo__country">Country</a>
                         <a href="#" class="geo__city">City</a>
                     </div>
-                    <ul class="geo__list">
-                        <li class="geo__item russia">Russia</li>
+                    <div class="geo__list">
+                        <div class="geo__item russia">Russia</div>
                         <progress class="geo__bar" max="100" value="94"></progress>
-                        <li class="geo__item ukraine">Ukraine</li>
-                        <progress class="geo__bar"max="100" value="5"></progress>
-                        <li class="geo__item mongolia">Mongolia</li>
-                        <progress class="geo__bar" max="100" value="3"></progress>
-                        <li class="geo__item china">China</li>
-                        <progress class="geo__bar" max="100" value="13"></progress>
-                        <li class="geo__item usa">USA</li>
+                        <div class="geo__item ukraine">Ukraine</div>
                         <progress class="geo__bar" max="100" value="5"></progress>
-                        <li class="geo__item other">Other</li>
+                        <div class="geo__item mongolia">Mongolia</div>
+                        <progress class="geo__bar" max="100" value="3"></progress>
+                        <div class="geo__item china">China</div>
+                        <progress class="geo__bar" max="100" value="13"></progress>
+                        <div class="geo__item usa">USA</div>
+                        <progress class="geo__bar" max="100" value="5"></progress>
+                        <div class="geo__item other">Other</div>
                         <progress class="geo__bar" max="100" value="7"></progress>
-                    </ul>
-                    
+                    </div>  
                 </div>
             </div>
         </main>
-
     </div>
-    
 </body>
-</html>
 </html>
