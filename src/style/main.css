@@ -570,10 +570,6 @@ textarea {
   transform: rotate(45deg);
 }
 
-.audience .graph__container {
-  overflow-x: auto;
-}
-
 .audience__graph {
   width: 716px;
   height: 141px;
@@ -834,6 +830,7 @@ textarea {
 }
 
 .nav__wrap {
+  position: relative;
   height: 430px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -917,7 +914,7 @@ textarea {
 .nav__wrap .nav__item::before {
   content: '';
   position: absolute;
-  left: -50px;
+  left: -45px;
   width: 50px;
   height: 50px;
   background-color: #7F7FD5;
@@ -928,6 +925,7 @@ textarea {
 
 @media (max-width: 1025px) {
   .nav__wrap .nav__item::before {
+    left: -279px;
     -webkit-transition: none;
     transition: none;
   }
@@ -940,7 +938,7 @@ textarea {
 }
 
 .nav__wrap .nav__item:hover::before {
-  left: -47px;
+  left: -40px;
   display: block;
 }
 
@@ -948,7 +946,7 @@ textarea {
   .nav__wrap .nav__item:hover::before {
     -webkit-transition: none;
     transition: none;
-    left: 7px;
+    left: 13%;
     bottom: -48px;
   }
 }
@@ -986,7 +984,7 @@ textarea {
   display: block;
   content: '';
   position: absolute;
-  left: -47px;
+  left: -40px;
   width: 50px;
   height: 50px;
   background-color: #7F7FD5;
@@ -995,7 +993,7 @@ textarea {
 
 @media (max-width: 1025px) {
   .nav__wrap .active::before {
-    left: 7px;
+    left: 13%;
     bottom: -48px;
     border-left: none;
   }
@@ -1443,7 +1441,7 @@ textarea {
   border-radius: 5px;
 }
 
-.gender-age {
+.gender {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
@@ -1456,9 +1454,83 @@ textarea {
 }
 
 @media (max-width: 1025px) {
-  .gender-age {
+  .gender {
     width: 100%;
   }
+}
+
+.gender__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 21px;
+}
+
+@media (max-width: 500px) {
+  .gender__header {
+    margin-bottom: 65px;
+  }
+}
+
+@media (max-width: 360px) {
+  .gender__header {
+    margin-bottom: 45px;
+  }
+}
+
+.gender__names {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100px;
+  margin-right: 40px;
+  font-family: 'Gilroy';
+  font-size: 12px;
+  line-height: 24px;
+  color: #4F4F4F;
+  font-family: 'Gilroy SemiBold';
+}
+
+@media (max-width: 500px) {
+  .gender__names {
+    margin-right: 0;
+    margin-left: 11px;
+  }
+}
+
+.gender__name::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: -23px;
+  width: 16px;
+  height: 16px;
+  border-radius: 5px;
+  background-color: #E786D7;
+}
+
+.gender__name::after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 54px;
+  width: 16px;
+  height: 16px;
+  border-radius: 5px;
+  background-color: #7F7FD5;
+}
+
+.gender__graph {
+  width: 631px;
+  height: 167px;
+  background: url(../img/Graphs-and-charts/Gender.png) no-repeat center/cover;
 }
 
 .geo {
@@ -1795,6 +1867,11 @@ textarea {
   font-size: 20px;
   line-height: 24px;
   color: #4F4F4F;
+}
+
+.graph__container {
+  margin-left: -20px;
+  overflow-x: auto;
 }
 
 @font-face {

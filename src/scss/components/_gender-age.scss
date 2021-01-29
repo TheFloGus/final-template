@@ -1,4 +1,61 @@
-.gender-age {
+.gender {
     @include grid-area(gender-age);
-    @include card-container(675px)
+    @include card-container(675px);
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 21px;
+
+        @include mobile {
+            margin-bottom: 65px;
+        }
+
+        @include mobile-small {
+            margin-bottom: 45px;
+        }
+    }
+
+    &__names {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        width: 100px;
+        margin-right: 40px;
+        @include text(12px, $primary-color);
+        font-family: 'Gilroy SemiBold';
+        
+        @include mobile{
+            margin-right: 0;
+            margin-left: 11px;
+        }
+    }
+
+    &__name::before {
+        content: '';
+        position: absolute;
+        top: 4px;
+        left: -23px;
+        width: 16px;
+        height: 16px;
+        border-radius: 5px;
+        background-color: $pink;
+    }
+
+    &__name::after {
+        content: '';
+        position: absolute;
+        top: 4px;
+        left: 54px;
+        width: 16px;
+        height: 16px;
+        border-radius: 5px;
+        background-color: $blue;
+    }
+
+    &__graph {
+        width: 631px;
+        height: 167px;
+        background: url(../img/Graphs-and-charts/Gender.png) no-repeat center/cover;
+    }
 }
