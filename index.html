@@ -63,17 +63,61 @@
                     <div class="card__numbers">+ 1%</div>
                 </div>
                 <div class="audience">
-                    <h2 class="card__title">Audience reach</h2>
-                    <div class="card__graph"></div>
+                    <div class="audience__container">
+                        <h2 class="card__title ">Audience reach</h2>
+                        <div class="audience__date">31/01/2020 – 06/02/2020</div>
+                        
+                        <div class="audience__input">
+                            <label class="box__container">
+                                <input type="radio" checked="checked" name="box" >
+                                <span class="audience__checkmark"></span> Total
+                            </label>
+                            <label class="box__container">
+                                <input type="radio" name="box">
+                                <span class="audience__checkmark box--red"></span> Follower
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="graph__container">
+                        <div class="audience__graph"></div>
+                    </div>
                 </div>
                 <div class="device">
-                    <h2 class="card__title"></h2>
+                    <h2 class="card__title">Reach by device</h2>
+                    <div class="device__container">
+                        <div class="device__chart">86%</div>
+                        <div class="device__names">
+                            <p class="device__name">Desktop</p>
+                            <p class="device__name">Mobile views</p>
+                        </div>
+                    </div>
+
                 </div>
                 <div class="gender-age">
-                    <h2 class="card__title"></h2>
+                    <h2 class="card__title">Gender / Age</h2>
                 </div>
                 <div class="geo">
-                    <h2 class="card__title"></h2>
+                    <h2 class="card__title geo__title" > Geo</h2>
+                    <div class="geo__names">
+                        <a href="#" class="geo__country">Country</a>
+                        <a href="#" class="geo__city">City</a>
+                    </div>
+                    <ul class="geo__list">
+                        <li class="geo__item russia">Russia</li>
+                        <progress class="geo__bar" max="100" value="94"></progress>
+                        <li class="geo__item ukraine">Ukraine</li>
+                        <progress class="geo__bar"max="100" value="5"></progress>
+                        <li class="geo__item mongolia">Mongolia</li>
+                        <progress class="geo__bar" max="100" value="3"></progress>
+                        <li class="geo__item china">China</li>
+                        <progress class="geo__bar" max="100" value="13"></progress>
+                        <li class="geo__item usa">USA</li>
+                        <progress class="geo__bar" max="100" value="5"></progress>
+                        <li class="geo__item other">Other</li>
+                        <progress class="geo__bar" max="100" value="7"></progress>
+                    </ul>
+                    
                 </div>
             </div>
         </main>
