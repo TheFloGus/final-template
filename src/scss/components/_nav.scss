@@ -116,6 +116,10 @@
                 background-color: #7F7FD5;
                 border-radius: 25%;
                 transition: all 0.1s ease-in;
+
+                @include tablet {
+                    transition: none;
+                }
             }
 
 
@@ -126,10 +130,12 @@
                 
             }
             .nav__item:hover::before {
+                
                 left: -47px;
                 display: block;
 
                 @include tablet {
+                    transition: none;
                     left: 7px;
                     bottom: -48px;
                 }
@@ -281,7 +287,7 @@
             display: none;
             width: 25px;
             height: 2px;
-            background-color: black;
+            background-color: $primary-color;
 
             @include mobile-small {
                 display: inline;
@@ -294,7 +300,7 @@
             top: 16px;
             width: 25px;
             height: 2px;
-            background-color: black;
+            background-color: $primary-color;
 
         }
 
@@ -304,7 +310,7 @@
             top: 32px;
             width: 25px;
             height: 2px;
-            background-color: black;
+            background-color: $primary-color;
         }
 
 }
