@@ -1359,7 +1359,11 @@ textarea {
   font-size: 12px;
   line-height: 24px;
   color: #FDFDFF;
-  padding: 58px 0px 0px 25px;
+}
+
+.device__percent {
+  -webkit-transform: translate(26px, 54px);
+          transform: translate(26px, 54px);
 }
 
 .device__chart::before {

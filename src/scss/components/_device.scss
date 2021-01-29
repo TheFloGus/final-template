@@ -22,7 +22,11 @@
     height: 121px;
     background: url(../img/Graphs-and-charts/Pie-blue.png) no-repeat center/cover;
     @include text (12px, #FDFDFF);
-    padding: 58px 0px 0px 25px;
+    // padding: 58px 0px 0px 25px;
+}
+
+.device__percent {
+    transform: translate(26px, 54px);
 }
 
 .device__chart::before {
