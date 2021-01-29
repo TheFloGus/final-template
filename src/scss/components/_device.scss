@@ -1,5 +1,77 @@
 
 .device {
+    position: relative;
     @include grid-area(device);
-    
+    @include card-container (288px);
+    padding-right: 10px;
+}
+
+.device__container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 38px;
+    @include tablet  {
+        justify-content: space-evenly;
+    }
+}
+
+.device__chart {
+    position: relative;
+    width: 121px;
+    height: 121px;
+    background: url(../img/Graphs-and-charts/Pie-blue.png) no-repeat center/cover;
+    @include text (12px, #FDFDFF);
+    padding: 58px 0px 0px 25px;
+}
+
+.device__chart::before {
+    content: '';
+    position: absolute;
+    top: 7px;
+    left: 77px;
+    width: 61px;
+    height: 47px;
+    background: url(../img/Graphs-and-charts/Pie-pink.png) no-repeat center/contain;
+}
+
+.device__chart::after{
+    content: '14%';
+    position: absolute;
+    top: 25px;
+    left: 106px;
+}
+
+.device__names {
+    position: relative;
+    margin-left: 59px;
+    @include text (12px, $primary-color);
+    font-family: 'Gilroy SemiBold';
+}
+
+.device__name {
+    margin-bottom: 11px;
+    line-height: 14px;
+}
+
+.device__name::before {
+    content: '';
+    position: absolute;
+    top: 24px;
+    left: -23px;
+    width: 16px;
+    height: 16px;
+    background-color: $blue;
+    border-radius: 5px;
+}
+
+.device__name::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -23px;
+    width: 16px;
+    height: 16px;
+    background-color: $pink;
+    border-radius: 5px;
 }
